@@ -12,9 +12,12 @@ do
     else if (input.All(char.IsDigit))
         numbers += ", " + input;
 
-    if(input.All(char.IsDigit))
+    if (input.All(char.IsDigit))
         result += int.Parse(input);
 }
 while (input != "q" && input != "Q");
 
-Console.WriteLine($"Součet čísel: {numbers} je {result}");
+if (numbers != "")
+    Console.WriteLine($"Součet čísel: {numbers} je {result}");
+else
+    Console.WriteLine("Nebyla zadána žádná čísla");
