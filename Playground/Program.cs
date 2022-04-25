@@ -1,7 +1,8 @@
 ﻿
-
-while (true)
+do
 {
+    Console.Clear();
+
     Console.WriteLine("Napiš první číslo a zmáčkni enter");
     int cislo1 = int.Parse(Console.ReadLine());
 
@@ -26,4 +27,7 @@ while (true)
     {
         Console.WriteLine($"Největší je číslo: {cislo3}");
     }
+
+    Console.WriteLine("Chcete ukončit? y/n");
 }
+while (Console.ReadKey().KeyChar != 'y');
