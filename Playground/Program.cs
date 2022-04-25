@@ -18,8 +18,10 @@ do
         Console.WriteLine("5 = Pátek");
     else if (cisloDne == 6)
         Console.WriteLine("6 = Sobota");
-    else
+    else if(cisloDne == 7)
         Console.WriteLine("7 = Neděle");
+    else
+        Console.WriteLine("Špatné číslo!");
 
     Console.WriteLine("Chcete ukončit? y/n");
 }
