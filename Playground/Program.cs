@@ -1,15 +1,30 @@
-﻿Console.WriteLine("Zadejte počet řádků.");
+﻿Console.WriteLine("Zadejte číslo dne");
 
-int rowCount = int.Parse(Console.ReadLine());
-string result = "";
-
-for (int i = 1; i <= rowCount; i++)
-{
-    for(int j = 1; j <= i; j++)
-    {
-        result += i.ToString();
-    }
-    result += "\n";
-}
+int dayNumber = int.Parse(Console.ReadLine());
+string result = GetDayFromNumber(dayNumber);
 
 Console.WriteLine($"Výsledek je: {result}");
+
+
+string GetDayFromNumber(int dayNumber)
+{
+    switch (dayNumber)
+    {
+        case 1:
+            return "Pondělí";
+        case 2:
+            return "Úterý";
+        case 3:
+            return "Středa";
+        case 4:
+            return "Čtvrtek";
+        case 5:
+            return "Pátek";
+        case 6:
+            return "Sobota";
+        case 7:
+            return "Neděle";
+        default:
+            return "Špatné číslo";
+    }
+}
