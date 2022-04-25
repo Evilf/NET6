@@ -1,32 +1,20 @@
-﻿//Console.WriteLine("Zadejte datum narození (ve formátu 1.1.2000)");
+﻿string numbers = "";
+int result = 0;
+string input = "";
 
-//DateTime birthday = DateTime.Parse(Console.ReadLine());
-
-//CalculateAgeFromBirthday(birthday);
-
-//void CalculateAgeFromBirthday(DateTime birthday)
-//{
-//    Console.WriteLine(Math.Floor(DateTime.Today.Subtract(birthday).TotalDays / 365));
-//}
-
-Console.WriteLine("Zadejte číslo dne");
-
-int dayNumber = int.Parse(Console.ReadLine());
-
-GetDayFromNumber(dayNumber);
-
-void GetDayFromNumber(int dayNumber)
+do
 {
-    Console.WriteLine((DaysOftheWeek)dayNumber);
-}
+    Console.WriteLine("Zadejte celé číslo");
+    input = Console.ReadLine();
 
-enum DaysOftheWeek
-{
-    Pondělí = 1,
-    Úterý = 2,
-    Středa = 3,
-    Čtvrtek = 4,
-    Pátek = 5,
-    Sobota = 6,
-    Neděle = 7
+    if (numbers == "" && input.All(char.IsDigit))
+        numbers += input;
+    else if (input.All(char.IsDigit))
+        numbers += ", " + input;
+
+    if(input.All(char.IsDigit))
+        result += int.Parse(input);
 }
+while (input != "q" && input != "Q");
+
+Console.WriteLine($"Součet čísel: {numbers} je {result}");
