@@ -4,7 +4,7 @@ string input = "";
 
 do
 {
-    Console.WriteLine("Zadejte celé číslo");
+    Console.WriteLine("Zadejte celé číslo nebo Q pro konec");
     input = Console.ReadLine();
 
     if (numbers == "" && input.All(char.IsDigit))
