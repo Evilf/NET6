@@ -38,11 +38,9 @@ do
             break;
     }
 
-    if (jeVikend)
-        Console.WriteLine("Je víkend");
-    else
-        Console.WriteLine("Není víkend");
+    Console.WriteLine(jeVikend ? "Je víkend" : "Není víkend");
 
     Console.WriteLine("Chcete ukončit? y/n");
+    Console.WriteLine(jeVikend ? "Je víkend" : "Není víkend");
 }
 while (Console.ReadKey().KeyChar != 'y');
