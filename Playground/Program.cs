@@ -1,12 +1,8 @@
 ﻿
-int a = 10;
-int b = 20;
+Console.WriteLine("Napiš teplotu v celsiu a zmáčkni enter");
 
-int c = 0;
-
-c = a;
-a = b;
-b = c;
+string? vstup = Console.ReadLine();
+int converted = ((int)Math.Round((int.Parse(vstup) * 1.8) + 32));
 
 
-Console.WriteLine("Hello, World!");
+Console.WriteLine($"Výsledek: {converted}");
