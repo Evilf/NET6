@@ -1,30 +1,10 @@
-﻿Console.WriteLine("Zadejte číslo dne");
+﻿Console.WriteLine("Zadejte datum narození (ve formátu 1.1.2000)");
 
-int dayNumber = int.Parse(Console.ReadLine());
-string result = GetDayFromNumber(dayNumber);
+DateTime birthday = DateTime.Parse(Console.ReadLine());
 
-Console.WriteLine($"Výsledek je: {result}");
+CalculateAgeFromBirthday(birthday);
 
-
-string GetDayFromNumber(int dayNumber)
+void CalculateAgeFromBirthday(DateTime birthday)
 {
-    switch (dayNumber)
-    {
-        case 1:
-            return "Pondělí";
-        case 2:
-            return "Úterý";
-        case 3:
-            return "Středa";
-        case 4:
-            return "Čtvrtek";
-        case 5:
-            return "Pátek";
-        case 6:
-            return "Sobota";
-        case 7:
-            return "Neděle";
-        default:
-            return "Špatné číslo";
-    }
+    Console.WriteLine(Math.Floor(DateTime.Today.Subtract(birthday).TotalDays / 365));
 }
