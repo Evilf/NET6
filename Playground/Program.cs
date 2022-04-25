@@ -3,30 +3,23 @@ do
 {
     Console.Clear();
 
-    Console.WriteLine("Napiš první číslo a zmáčkni enter");
-    int cislo1 = int.Parse(Console.ReadLine());
+    Console.WriteLine("Napiš číslo dne a zmáčkni enter");
+    int cisloDne = int.Parse(Console.ReadLine());
 
-    Console.WriteLine("Napiš druhé číslo a zmáčkni enter");
-    int cislo2 = int.Parse(Console.ReadLine());
-
-    Console.WriteLine("Napiš třetí číslo a zmáčkni enter");
-    int cislo3 = int.Parse(Console.ReadLine());
-
-    if (cislo1 > cislo2)
-    {
-        if (cislo1 > cislo3)
-        {
-            Console.WriteLine($"Největší je číslo: {cislo1}");
-        }
-    }
-    else if (cislo2 > cislo3)
-    {
-        Console.WriteLine($"Největší je číslo: {cislo2}");
-    }
+    if (cisloDne == 1)
+        Console.WriteLine("1 = Pondělí");
+    else if (cisloDne == 2)
+        Console.WriteLine("2 = Úterý");
+    else if (cisloDne == 3)
+        Console.WriteLine("3 = Středa");
+    else if (cisloDne == 4)
+        Console.WriteLine("4 = Čtvrtek");
+    else if (cisloDne == 5)
+        Console.WriteLine("5 = Pátek");
+    else if (cisloDne == 6)
+        Console.WriteLine("6 = Sobota");
     else
-    {
-        Console.WriteLine($"Největší je číslo: {cislo3}");
-    }
+        Console.WriteLine("7 = Neděle");
 
     Console.WriteLine("Chcete ukončit? y/n");
 }
