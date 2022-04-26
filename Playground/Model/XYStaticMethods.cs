@@ -9,9 +9,12 @@ namespace Playground.Model
     public static class XYStaticMethods
     {
 
-        public static int MaxArea(XY point1, XY point2)
+        public static XY GetMaxAreaPoint(XY point1, XY point2)
         {
-            return Math.Max(point1.CalculateArea(), point2.CalculateArea());
+            if (point1.CalculateArea() > point2.CalculateArea())
+                return point1;
+            else
+                return point2;
         }
 
         public static XY GetPointMoreDistantFromOrigin(XY point1, XY point2)
