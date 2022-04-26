@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Playground.Model
+namespace Playground.Enums
 {
     public enum Quadrant
     {

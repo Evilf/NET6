@@ -1,10 +1,11 @@
-﻿using System;
+﻿using Playground.BaseClasses;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Playground.Model
+namespace Playground.StaticClasses
 {
     public static class XYStaticMethods
     {

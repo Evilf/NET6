@@ -1,10 +1,11 @@
-﻿using System;
+﻿using Playground.Enums;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Playground.Model
+namespace Playground.BaseClasses
 {
     public class XY
     {
