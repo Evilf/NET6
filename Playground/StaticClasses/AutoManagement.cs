@@ -1,4 +1,5 @@
 ﻿using Playground.BaseClasses;
+using Playground.Data;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,7 +16,7 @@ namespace Playground.StaticClasses
         public static bool CheckIfAutoWasStolen(Auto auto)
         {
             if (!IsStolenLicencePlatesLoaded)
-                LoadStolenLicencePlates(@"C:\Users\michael.vrnata\source\repos\Evilf\NET6\Playground\Data\StolenLicencePlates.txt");
+                LoadStolenLicencePlates(Constants.StolenLicencePlatesFilePath);
 
             if (!StolenLicencePlates.Contains(auto.LicencePlate))
                 return false;
