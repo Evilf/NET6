@@ -25,7 +25,7 @@ namespace Playground.Model
             Console.WriteLine($"X: {X} Y: {Y}");
         }
 
-        public int GetVolume()
+        public int CalculateArea()
         {
             return X * Y;
         }
