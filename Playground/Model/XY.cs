@@ -30,5 +30,19 @@ namespace Playground.Model
             return Math.Abs(X * Y);
         }
 
+        public Quadrant GetQuadrant()
+        {
+            if (X >= 0 && Y >= 0)
+                return Quadrant.Quadrant1;
+            if (X < 0 && Y >= 0)
+                return Quadrant.Quadrant2;
+            if (X < 0 && Y < 0)
+                return Quadrant.Quadrant3;
+            if (X >= 0 && Y < 0)
+                return Quadrant.Quadrant4;
+            else
+                return Quadrant.Error;
+        }
+
     }
 }
