@@ -18,5 +18,17 @@ namespace Playground.Model
             Y = y;
         }
 
+
+
+        public void Print()
+        {
+            Console.WriteLine($"X: {X} Y: {Y}");
+        }
+
+        public int GetVolume()
+        {
+            return X * Y;
+        }
+
     }
 }
