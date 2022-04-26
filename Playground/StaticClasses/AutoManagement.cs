@@ -11,7 +11,7 @@ namespace Playground.StaticClasses
     public static class AutoManagement
     {
         public static List<string> StolenLicencePlates = new List<string>();
-        public static bool IsStolenLicencePlatesLoaded = false;
+        private static bool IsStolenLicencePlatesLoaded = false;
 
         public static bool CheckIfAutoWasStolen(Auto auto)
         {
