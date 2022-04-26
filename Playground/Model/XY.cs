@@ -32,6 +32,9 @@ namespace Playground.Model
 
         public Quadrant GetQuadrant()
         {
+            if (X == 0 && Y == 0)
+                return Quadrant.Origin;
+
             if (X >= 0 && Y >= 0)
                 return Quadrant.Quadrant1;
             if (X < 0 && Y >= 0)

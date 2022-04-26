@@ -8,6 +8,7 @@ namespace Playground.Model
 {
     public enum Quadrant
     {
+        Origin,
         Quadrant1,
         Quadrant2,
         Quadrant3,
