@@ -21,10 +21,9 @@ namespace Playground.BaseClasses
 
 
 
-        public void Print()
-        {
+        public void Print() =>
             Console.WriteLine($"X: {X} Y: {Y}");
-        }
+
 
         public int CalculateArea()
         {

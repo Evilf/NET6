@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Playground.StaticClasses;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
@@ -9,22 +10,26 @@ namespace Playground.BaseClasses
 {
     public class Auto
     {
-        public string SPZ { get; set; }
+        public string LicencePlate { get; set; }
         public Color Color { get; set; }
         public double KilometersDriven { get; set; }
         public string CarBrand { get; set; }
+        public bool IsAutoStolen 
+        { 
+            get => AutoStaticMethods.CheckIfAutoWasStolen(this); 
+        }
 
         public Auto()
         {
-            SPZ = "";
+            LicencePlate = "";
             Color = Color.Transparent;
             KilometersDriven = 0;
             CarBrand = "";
         }
 
-        public Auto(string sPZ, Color color, double kilometersDriven, string carBrand)
+        public Auto(string licencePlate, Color color, double kilometersDriven, string carBrand)
         {
-            SPZ = sPZ;
+            LicencePlate = licencePlate;
             Color = color; 
             KilometersDriven = kilometersDriven;
             CarBrand = carBrand;
