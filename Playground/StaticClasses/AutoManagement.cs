@@ -7,13 +7,15 @@ using System.Threading.Tasks;
 
 namespace Playground.StaticClasses
 {
-    public static class AutoStaticMethods
+    public static class AutoManagement
     {
         public static List<string> StolenLicencePlates = new List<string>();
+        public static bool IsStolenLicencePlatesLoaded = false;
 
         public static bool CheckIfAutoWasStolen(Auto auto)
         {
-            LoadStolenLicencePlates(@"C:\Users\michael.vrnata\source\repos\Evilf\NET6\Playground\Data\StolenLicencePlates.txt");
+            if (!IsStolenLicencePlatesLoaded)
+                LoadStolenLicencePlates(@"C:\Users\michael.vrnata\source\repos\Evilf\NET6\Playground\Data\StolenLicencePlates.txt");
 
             if (!StolenLicencePlates.Contains(auto.LicencePlate))
                 return false;
@@ -21,8 +23,11 @@ namespace Playground.StaticClasses
                 return true;
         }
 
-        public static void LoadStolenLicencePlates(string filePath) =>
+        public static void LoadStolenLicencePlates(string filePath)
+        {
             StolenLicencePlates = File.ReadAllLines(filePath).ToList();
+            IsStolenLicencePlatesLoaded = true;
+        }
 
     }
 }

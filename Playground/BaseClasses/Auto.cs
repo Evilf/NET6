@@ -16,7 +16,7 @@ namespace Playground.BaseClasses
         public string CarBrand { get; set; }
         public bool IsAutoStolen 
         { 
-            get => AutoStaticMethods.CheckIfAutoWasStolen(this); 
+            get => AutoManagement.CheckIfAutoWasStolen(this); 
         }
 
         public Auto()
