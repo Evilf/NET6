@@ -8,8 +8,12 @@ namespace Playground.Model
 {
     public static class RandomPointGenerator
     {
+        public static int Counter = 0;
+
         public static XY GetRandomPoint()
         {
+            Counter++;
+
             return new XY(new Random().Next(-11, 11), new Random().Next(-11, 11));
         }
     }
