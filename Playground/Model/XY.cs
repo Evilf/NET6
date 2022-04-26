@@ -27,7 +27,7 @@ namespace Playground.Model
 
         public int CalculateArea()
         {
-            return X * Y;
+            return Math.Abs(X * Y);
         }
 
     }
