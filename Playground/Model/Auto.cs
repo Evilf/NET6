@@ -16,7 +16,10 @@ namespace Playground.Model
 
         public Auto()
         {
-
+            SPZ = "";
+            Color = Color.Transparent;
+            KilometersDriven = 0;
+            CarBrand = "";
         }
 
         public Auto(string sPZ, Color color, double kilometersDriven, string carBrand)
