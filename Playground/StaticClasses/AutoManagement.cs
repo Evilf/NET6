@@ -26,8 +26,15 @@ namespace Playground.StaticClasses
 
         public static void LoadStolenLicencePlates(string filePath)
         {
-            StolenLicencePlates = File.ReadAllLines(filePath).ToList();
-            IsStolenLicencePlatesLoaded = true;
+            try
+            {
+                StolenLicencePlates = File.ReadAllLines(filePath).ToList();
+                IsStolenLicencePlatesLoaded = true;
+            }
+            catch (Exception ex)
+            {
+                IsStolenLicencePlatesLoaded = false;
+            }
         }
 
     }
