@@ -7,8 +7,18 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="120"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        
         <Button Name="btnOk" Content="Ok" HorizontalAlignment="Center" VerticalAlignment="Center" Width="200" Height="100" FontSize="50" Click="btnOk_Click"/>
-        <TextBlock Name="tbForOk" Text="Test" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,160,0,0" FontSize="30"/>
+        <TextBlock Name="tbForOk" Text="{Binding People}" Grid.Row="2" VerticalAlignment="Top" HorizontalAlignment="Center" FontSize="15" />
 
     </Grid>
 </Window>

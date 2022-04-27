@@ -1,4 +1,5 @@
 ﻿using Playground.BaseClasses;
+using Playground.StaticClasses;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,11 +11,14 @@ namespace WpfApp1.Froms.ViewModels
 {
     public class VM_MainWindow : DataContext
     {
-        public List<Person> People { get => Get(); set => Set(value); }
+        public string People { get => Get(); set => Set(value); }
 
         public VM_MainWindow()
         {
-            People = Dataset.People;
+            People = "";
         }
+
+        public void GetPeople() =>
+                People += $"{RandomPersonGenerator.GetRandomPerson()}\n\n";
     }
 }

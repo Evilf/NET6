@@ -31,12 +31,13 @@ namespace WpfApp1.Forms
         public MainWindow(VM_MainWindow vM_MainWindow)
         {
             InitializeComponent();
+            VM_MainWindow = vM_MainWindow;
             DataContext = vM_MainWindow;
         }
 
         private void btnOk_Click(object sender, RoutedEventArgs e)
         {
-            Close();
+            VM_MainWindow.GetPeople();
         }
     }
 }
