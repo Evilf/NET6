@@ -26,14 +26,14 @@ namespace Playground.Data
             DateTime dateTime = new DateTime(years.OrderBy(x => rnd.Next()).First(), months.OrderBy(x => rnd.Next()).First(), days.OrderBy(x => rnd.Next()).First());
             Address address = new Address() { City = cities.OrderBy(x => rnd.Next()).First(), Street = streets.OrderBy(x => rnd.Next()).First() };
 
-            var person1 = new Person(maleFirstNames.OrderBy(x => rnd.Next()).First(), maleLastNames.OrderBy(x => rnd.Next()).First(), dateTime, address);
+            var malePerson = new Person(maleFirstNames.OrderBy(x => rnd.Next()).First(), maleLastNames.OrderBy(x => rnd.Next()).First(), dateTime, address);
 
-            var person2 = new Person(femaleFirstNames.OrderBy(x => rnd.Next()).First(), femaleLastNames.OrderBy(x => rnd.Next()).First(), dateTime, address);
+            var femalePerson = new Person(femaleFirstNames.OrderBy(x => rnd.Next()).First(), femaleLastNames.OrderBy(x => rnd.Next()).First(), dateTime, address);
 
             if (rnd.Next(0, 2) == 1)
-                return person1;
+                return malePerson;
             else
-                return person2;
+                return femalePerson;
 
         }
 
