@@ -3,9 +3,10 @@ using Playground.Enums;
 using Playground.StaticClasses;
 using System.Drawing;
 
-Auto auto = new Auto("ss58585", Color.Black, 56897.4, "Audi");
+int[] cisla = { 11, 2, 13, 44, -5, 6, 127, -99, 0, 256 };
 
-if (auto.IsAutoStolen)
-    Console.WriteLine("Auto je kradené!");
-else
-    Console.WriteLine("Auto není kradené!");
+var result = cisla.Where(x => x >= -50 && x <= 50);
+
+foreach(int i in result)
+    Console.WriteLine(i);
+
