@@ -13,17 +13,20 @@ namespace Playground.BaseClasses
         public int X { get; set; }
         public int Y { get; set; }
 
+        public XY()
+        {
+            X = 0;
+            Y = 0;
+        }
+
         public XY(int x, int y)
         {
             X = x;
             Y = y;
         }
 
-
-
         public void Print() =>
             Console.WriteLine($"X: {X} Y: {Y}");
-
 
         public int CalculateArea()
         {

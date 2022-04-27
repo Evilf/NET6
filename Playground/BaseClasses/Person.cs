@@ -21,7 +21,8 @@ namespace Playground.BaseClasses
 
         public Person()
         {
-
+            FirstName = "John";
+            LastName = "Doe";
         }
 
         public Person(string firstName, string lastName)

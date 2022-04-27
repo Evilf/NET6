@@ -10,6 +10,7 @@ namespace Playground.BaseClasses
 {
     public class Auto
     {
+        public Person Owner { get; set; }
         public string LicencePlate { get; set; }
         public Color Color { get; set; }
         public double KilometersDriven { get; set; }
@@ -21,14 +22,16 @@ namespace Playground.BaseClasses
 
         public Auto()
         {
+            Owner = new Person();
             LicencePlate = "";
             Color = Color.Transparent;
             KilometersDriven = 0;
             CarBrand = "";
         }
 
-        public Auto(string licencePlate, Color color, double kilometersDriven, string carBrand)
+        public Auto(Person owner, string licencePlate, Color color, double kilometersDriven, string carBrand)
         {
+            Owner = owner;
             LicencePlate = licencePlate;
             Color = color; 
             KilometersDriven = kilometersDriven;
