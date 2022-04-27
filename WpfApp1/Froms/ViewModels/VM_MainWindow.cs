@@ -26,7 +26,10 @@ namespace WpfApp1.Froms.ViewModels
             SelectedPerson = People.FirstOrDefault();
         }
 
-        public void GetPeople() =>
+        public void GetPeople()
+        {
+            for (int i = 0; i < 5; i++)
                 People.Add(RandomPersonGenerator.GetRandomPerson());
+        }
     }
 }
