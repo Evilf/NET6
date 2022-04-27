@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WpfApp1.Froms;
 using WpfApp1.Froms.ViewModels;
 
 namespace WpfApp1.Forms
@@ -38,6 +39,15 @@ namespace WpfApp1.Forms
         private void btnOk_Click(object sender, RoutedEventArgs e)
         {
             VM_MainWindow.GetPeople();
+        }
+
+        private void btnDetail_Click(object sender, RoutedEventArgs e)
+        {
+            if (VM_MainWindow.SelectedPerson != null)
+            {
+                PersonWindowDetail personWindowDetail = new PersonWindowDetail(VM_MainWindow);
+                personWindowDetail.Show();
+            }
         }
     }
 }

@@ -16,9 +16,13 @@
             <RowDefinition Height="20"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
+
+        <StackPanel Orientation="Horizontal" Grid.Row="0" HorizontalAlignment="Center">
+            <Button Name="btnOk" Content="Ok" Width="200" Height="80" FontSize="50" Click="btnOk_Click" Margin="0,0,10,0"/>
+            <Button Name="btnDetail" Content="Detail" Width="200" Height="80" FontSize="50" Click="btnDetail_Click"/>
+        </StackPanel>
         
-        <Button Name="btnOk" Content="Ok" HorizontalAlignment="Center" VerticalAlignment="Center" Width="200" Height="100" FontSize="50" Click="btnOk_Click"/>
-        <TextBlock Name="tbForOk" Text="{Binding People}" Grid.Row="2" VerticalAlignment="Top" HorizontalAlignment="Center" FontSize="15" />
+        <DataGrid Name="tbForOk" ItemsSource="{Binding People}" SelectedItem="{Binding SelectedPerson}" Grid.Row="2" VerticalAlignment="Top" HorizontalAlignment="Center"/>
 
     </Grid>
 </Window>

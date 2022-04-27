@@ -28,5 +28,9 @@ namespace Playground.BaseClasses
             ZipCode = zipCode;
             Street = street;
         }
+
+        public override string ToString() =>
+            $"{Street}, {City}, {State}";
+
     }
 }

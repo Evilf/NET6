@@ -2,6 +2,7 @@
 using Playground.StaticClasses;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,14 +12,21 @@ namespace WpfApp1.Froms.ViewModels
 {
     public class VM_MainWindow : DataContext
     {
-        public string People { get => Get(); set => Set(value); }
+        public ObservableCollection<Person> People { get => Get(); set => Set(value); }
+        public Person SelectedPerson { get => Get(); set => Set(value); }
 
         public VM_MainWindow()
         {
-            People = "";
+            InitializeProperties();
+        }
+
+        private void InitializeProperties()
+        {
+            People = new ObservableCollection<Person>();
+            SelectedPerson = People.FirstOrDefault();
         }
 
         public void GetPeople() =>
-                People += $"{RandomPersonGenerator.GetRandomPerson()}\n\n";
+                People.Add(RandomPersonGenerator.GetRandomPerson());
     }
 }
