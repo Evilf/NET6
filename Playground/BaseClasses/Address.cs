@@ -10,22 +10,22 @@ namespace Playground.BaseClasses
     {
         public string State { get; set; }
         public string City { get; set; }
-        public string PostalCode { get; set; }
+        public string ZipCode { get; set; }
         public string Street { get; set; }
 
         public Address()
         {
             State = "Česká Republika";
             City = "";
-            PostalCode = "";
+            ZipCode = "";
             Street = "";
         }
 
-        public Address(string state, string city, string postalCode, string street)
+        public Address(string state, string city, string zipCode, string street)
         {
             State = state;
             City = city;
-            PostalCode = postalCode;
+            ZipCode = postalCode;
             Street = street;
         }
     }
