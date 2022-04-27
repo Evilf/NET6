@@ -35,5 +35,12 @@ namespace Playground.BaseClasses
             BirthDay = birthDay;
             Address = address;
         }
+
+        public void PrintOut()
+        {
+            Console.WriteLine($"Jméno: {FullName}");
+            Console.WriteLine($"Datum narození: {BirthDay.Date}");
+            Console.WriteLine($"Adresa: {Address.Street}, {Address.City}, {Address.State}");
+        }
     }
 }

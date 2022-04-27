@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Playground.Data
+namespace Playground.StaticClasses
 {
     public class RandomPersonGenerator
     {
