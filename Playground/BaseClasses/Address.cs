@@ -25,7 +25,7 @@ namespace Playground.BaseClasses
         {
             State = state;
             City = city;
-            ZipCode = postalCode;
+            ZipCode = zipCode;
             Street = street;
         }
     }
