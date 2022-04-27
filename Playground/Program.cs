@@ -10,6 +10,6 @@ for(int i = 0; i < 50; i++)
     persons.Add(RandomPersonGenerator.GetRandomPerson());
 }
 
-persons.ForEach(persons => persons.PrintOut());
+persons.Where(x => x.Address.City == "Praha").Count();
 
 

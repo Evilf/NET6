@@ -10,12 +10,12 @@ namespace Playground.BaseClasses
     {
         public string? FirstName { get; set; }
         public string? LastName { get; set; }
-        public string? FullName 
-        { 
+        public string? FullName
+        {
             get
             {
                 return FirstName + " " + LastName;
-            } 
+            }
         }
         public DateTime BirthDay { get; set; }
         public Address Address { get; set; }
@@ -36,11 +36,7 @@ namespace Playground.BaseClasses
             Address = address;
         }
 
-        public void PrintOut()
-        {
-            Console.WriteLine($"Jméno: {FullName}");
-            Console.WriteLine($"Datum narození: {BirthDay.Date}");
-            Console.WriteLine($"Adresa: {Address.Street}, {Address.City}, {Address.State}");
-        }
+        public override string ToString() =>
+            $"Jméno: {FullName} \nDatum narození: {BirthDay.ToShortDateString()} \nAdresa: {Address.Street}, {Address.City}, {Address.State}";
     }
 }
