@@ -1,4 +1,4 @@
-﻿<Window x:Class="WpfApp1.MainWindow"
+﻿<Window x:Class="WpfApp1.Forms.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -7,6 +7,8 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+        <Button Name="btnOk" Content="Ok" HorizontalAlignment="Center" VerticalAlignment="Center" Width="200" Height="100" FontSize="50" Click="btnOk_Click"/>
+        <TextBlock Name="tbForOk" Text="Test" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,160,0,0" FontSize="30"/>
 
     </Grid>
 </Window>

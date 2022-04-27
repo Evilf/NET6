@@ -13,5 +13,10 @@ namespace WpfApp1
     /// </summary>
     public partial class App : Application
     {
+        private void Application_Startup(object sender, StartupEventArgs e)
+        {
+            Forms.MainWindow mainWindow = new Forms.MainWindow(new Froms.ViewModels.VM_MainWindow());
+            mainWindow.Show();
+        }
     }
 }

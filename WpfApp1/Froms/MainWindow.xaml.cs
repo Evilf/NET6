@@ -12,17 +12,31 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WpfApp1.Froms.ViewModels;
 
-namespace WpfApp1
+namespace WpfApp1.Forms
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window
     {
+        public VM_MainWindow VM_MainWindow { get; set; }
+
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        public MainWindow(VM_MainWindow vM_MainWindow)
+        {
+            InitializeComponent();
+            DataContext = vM_MainWindow;
+        }
+
+        private void btnOk_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
         }
     }
 }
