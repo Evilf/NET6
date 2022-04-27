@@ -24,13 +24,15 @@ namespace Playground.BaseClasses
         {
             FirstName = "John";
             LastName = "Doe";
+            BirthDay = DateTime.Parse("1.1.1900");
             Address = new Address();
         }
 
-        public Person(string firstName, string lastName, Address address)
+        public Person(string firstName, string lastName, DateTime birthDay, Address address)
         {
             FirstName = firstName;
             LastName = lastName;
+            BirthDay = birthDay;
             Address = address;
         }
     }
