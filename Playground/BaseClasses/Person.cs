@@ -24,7 +24,7 @@ namespace Playground.BaseClasses
         {
             FirstName = "John";
             LastName = "Doe";
-            BirthDay = DateTime.Parse("1.1.1900");
+            BirthDay = new DateTime(1900, 1, 1);
             Address = new Address();
         }
 
