@@ -18,17 +18,20 @@ namespace Playground.BaseClasses
             } 
         }
         public DateTime BirthDay { get; set; }
+        public Address Address { get; set; }
 
         public Person()
         {
             FirstName = "John";
             LastName = "Doe";
+            Address = new Address();
         }
 
-        public Person(string firstName, string lastName)
+        public Person(string firstName, string lastName, Address address)
         {
             FirstName = firstName;
             LastName = lastName;
+            Address = address;
         }
     }
 }
