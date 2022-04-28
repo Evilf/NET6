@@ -19,7 +19,8 @@
 
         <StackPanel Orientation="Horizontal" Grid.Row="0" HorizontalAlignment="Center">
             <Button Name="btnOk" Content="Ok" Width="200" Height="80" FontSize="50" Click="btnOk_Click" Margin="0,0,10,0"/>
-            <Button Name="btnDetail" Content="Detail" Width="200" Height="80" FontSize="50" Click="btnDetail_Click"/>
+            <Button Name="btnDetail" Content="Detail" Width="200" Height="80" FontSize="50" Click="btnDetail_Click" Margin="0,0,10,0"/>
+            <Button Name="btnLoadAPI" Content="LoadAPI" Width="200" Height="80" FontSize="50" Click="btnLoadAPI_Click"/>
         </StackPanel>
         
         <DataGrid Name="tbForOk" ItemsSource="{Binding People}" SelectedItem="{Binding SelectedPerson}" Grid.Row="2" VerticalAlignment="Top" HorizontalAlignment="Center"/>

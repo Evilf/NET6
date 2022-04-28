@@ -49,5 +49,10 @@ namespace WpfApp1.Forms
                 personWindowDetail.Show();
             }
         }
+
+        private async void btnLoadAPI_Click(object sender, RoutedEventArgs e)
+        {
+            await VM_MainWindow.GetPeopleFromAPI(5);
+        }
     }
 }

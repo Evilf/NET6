@@ -4,6 +4,8 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
+using System.Net.Http;
+using System.Net.Http.Json;
 using System.Text;
 using System.Threading.Tasks;
 using WpfApp1.MainClasses;
@@ -28,8 +30,21 @@ namespace WpfApp1.Froms.ViewModels
 
         public void GetPeople()
         {
-            for (int i = 0; i < 5; i++)
-                People.Add(RandomPersonGenerator.GetRandomPerson());
+            People.Clear();
+            RandomPersonGenerator.GetPeople(10).ForEach(x => People.Add(x));
         }
+
+        public async Task GetPeopleFromAPI(int count)
+        {
+            People.Clear();
+            
+            HttpClient httpClient = new HttpClient();
+            HttpResponseMessage httpResult = await httpClient.GetAsync(GetPeopleURL(count));
+
+            if (httpResult.IsSuccessStatusCode)
+                People = await httpResult.Content.ReadFromJsonAsync<ObservableCollection<Person>>();
+        }
+
+        public static string GetPeopleURL(int count) => $"https://localhost:7266/people?count={count}";
     }
 }

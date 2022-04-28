@@ -9,6 +9,6 @@ namespace WpfApp1
 {
     public static class Dataset
     {
-        public static List<Person> People = new List<Person>();
+
     }
 }

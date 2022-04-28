@@ -37,6 +37,16 @@ namespace Playground.StaticClasses
 
         }
 
+        public static List<Person> GetPeople(int count)
+        {
+            List<Person> persons = new List<Person>();
+
+            for (int i = 0; i < count; i++)
+                persons.Add(RandomPersonGenerator.GetRandomPerson());
+
+            return persons;
+        }
+
     }
 
 }
